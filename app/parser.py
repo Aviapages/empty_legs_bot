@@ -23,7 +23,7 @@ class EmptyLegsParser:
     def __init__(self) -> None:
         self.headers = {
             'Content-Type': 'application/json',
-            'Authorization': os.environ.get('API_TOKEN')
+            'Authorization': f'Token {os.environ.get("API_TOKEN")}'
         }
         self.current_time = datetime.now().strftime('%Y-%m-%dT%H:%M')
         self.current_hour = f'H_{datetime.now().strftime("%H")}'
